@@ -88,20 +88,45 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: getBody(),
-      bottomNavigationBar: SizedBox(
-        height: 70,
-        child: BottomNavigationBar(
-          items: item,
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: primary,
-          currentIndex: selectedItem,
-          onTap: (index){
-            setState(() {
-              selectedItem = index;
-            });
-          },
-        ),
+      bottomNavigationBar: Stack(
+        children: <Widget>[
+          
+          getBody(),
+          
+          Positioned(
+            left: 20,
+            right: 20,
+            bottom: 20,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)), 
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black26,
+                    spreadRadius: 0,
+                    blurRadius: 15,
+                    offset: Offset(0, 8.0),
+                  )
+                ]
+              ),
+              child: BottomNavigationBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                items: item,
+                type: BottomNavigationBarType.fixed,
+                selectedItemColor: primary,
+                currentIndex: selectedItem,
+                onTap: (index){
+                  setState(() {
+                    selectedItem = index;
+                  });
+                },
+                
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

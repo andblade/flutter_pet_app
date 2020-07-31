@@ -5,68 +5,80 @@ class Pesquisar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-              child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 30, 20, 30),
-          child: Column(
-            children: <Widget>[
-              Text('Encontre o que precisar para seu Pet', style: appTitle, textAlign: TextAlign.center,),
-              SizedBox(height: 30,),
-              
-              // cards
-              PesquisaCard(
-                primeiroItemTitle: 'Clínica \nVeterinária',
-                primeiroItemImg: 'img/card_1.png',
-                primeiroItemBg: card1,
-                primeiroItemColor: textWhite,
+      child: ListView(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(top: 70, left: 30, right: 30, bottom: 100),
+            child: Column(
+              children: <Widget>[
+                Text('Encontre o que precisar para seu Pet', style: appTitle, textAlign: TextAlign.center,),
+                SizedBox(height: 30,),
 
-                segundoItemTitle: 'Lugares \npara comer',
-                segundoItemImg: 'img/card_2.png',
-                segundoItemBg: card2,
-                segundoItemColor: textWhite,
-              ),
+                // cards
+                PesquisaCard(
+                  primeiroItemTitle: 'Clínica \nVeterinária',
+                  primeiroItemImg: 'img/card_1.png',
+                  primeiroItemBg: card1,
+                  primeiroItemColor: textWhite,
 
-              PesquisaCard(
-                primeiroItemTitle: 'Locais \npara andar',
-                primeiroItemImg: 'img/card_3.png',
-                primeiroItemBg: card3,
-                primeiroItemColor: textWhite,
+                  segundoItemTitle: 'Lugares \npara comer',
+                  segundoItemImg: 'img/card_2.png',
+                  segundoItemBg: card2,
+                  segundoItemColor: textWhite,
+                ),
 
-                segundoItemTitle: 'Spas e \nsalões',
-                segundoItemImg: 'img/card_4.png',
-                segundoItemBg: card4,
-                segundoItemColor: textWhite,
-              ),
+                PesquisaCard(
+                  primeiroItemTitle: 'Locais \npara andar',
+                  primeiroItemImg: 'img/card_3.png',
+                  primeiroItemBg: card3,
+                  primeiroItemColor: textWhite,
 
-              PesquisaCard(
-                primeiroItemTitle: 'Lojas e \nProdutos',
-                primeiroItemImg: 'img/card_5.png',
-                primeiroItemBg: card5,
-                primeiroItemColor: textWhite,
+                  segundoItemTitle: 'Spas e \nsalões',
+                  segundoItemImg: 'img/card_4.png',
+                  segundoItemBg: card4,
+                  segundoItemColor: textWhite,
+                ),
 
-                segundoItemTitle: 'Grupos de \ncaminhada',
-                segundoItemImg: 'img/card_6.png',
-                segundoItemBg: card6,
-                segundoItemColor: textWhite,
-              ),
+                PesquisaCard(
+                  primeiroItemTitle: 'Lojas e \nProdutos',
+                  primeiroItemImg: 'img/card_5.png',
+                  primeiroItemBg: card5,
+                  primeiroItemColor: textWhite,
 
-              PesquisaCard(
-                primeiroItemTitle: 'Animais',
-                primeiroItemImg: 'img/card_7.png',
-                primeiroItemBg: card7,
-                primeiroItemColor: textWhite,
+                  segundoItemTitle: 'Grupos de \ncaminhada',
+                  segundoItemImg: 'img/card_6.png',
+                  segundoItemBg: card6,
+                  segundoItemColor: textWhite,
+                ),
 
-                segundoItemTitle: 'Lugares \npara comer',
-                segundoItemImg: 'img/card_8.png',
-                segundoItemBg: card8,
-                segundoItemColor: textWhite,
-              ),
-              
+                PesquisaCard(
+                  primeiroItemTitle: 'Animais',
+                  primeiroItemImg: 'img/card_7.png',
+                  primeiroItemBg: card7,
+                  primeiroItemColor: textWhite,
 
-            ]
+                  segundoItemTitle: 'Lugares \npara comer',
+                  segundoItemImg: 'img/card_8.png',
+                  segundoItemBg: card8,
+                  segundoItemColor: textWhite,
+                ),
+
+                PesquisaCard(
+                  primeiroItemTitle: 'Animais',
+                  primeiroItemImg: 'img/card_7.png',
+                  primeiroItemBg: card7,
+                  primeiroItemColor: textWhite,
+
+                  segundoItemTitle: 'Lugares \npara comer',
+                  segundoItemImg: 'img/card_8.png',
+                  segundoItemBg: card8,
+                  segundoItemColor: textWhite,
+                ),
+                
+              ]
+            ),
           ),
-        ),
+        ]
       ),
     );
   }
