@@ -9,14 +9,14 @@ class DestaqueDIa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 90,
       width: double.infinity,
+      height: MediaQuery.of(context).size.height * 0.15, // height: 90,
       child: Stack(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(top: 12),
             child: Container(
-              height: 70,
+              height: MediaQuery.of(context).size.height * 0.12, // height: 70,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: primary,

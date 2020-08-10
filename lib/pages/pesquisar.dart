@@ -63,17 +63,17 @@ class Pesquisar extends StatelessWidget {
                   segundoItemColor: textWhite,
                 ),
 
-                PesquisaCard(
-                  primeiroItemTitle: 'Animais',
-                  primeiroItemImg: 'img/card_7.png',
-                  primeiroItemBg: card7,
-                  primeiroItemColor: textWhite,
+                // PesquisaCard(
+                //   primeiroItemTitle: 'Animais',
+                //   primeiroItemImg: 'img/card_7.png',
+                //   primeiroItemBg: card7,
+                //   primeiroItemColor: textWhite,
 
-                  segundoItemTitle: 'Lugares \npara comer',
-                  segundoItemImg: 'img/card_8.png',
-                  segundoItemBg: card8,
-                  segundoItemColor: textWhite,
-                ),
+                //   segundoItemTitle: 'Lugares \npara comer',
+                //   segundoItemImg: 'img/card_8.png',
+                //   segundoItemBg: card8,
+                //   segundoItemColor: textWhite,
+                // ),
                 
               ]
             ),
@@ -120,14 +120,14 @@ class PesquisaCard extends StatelessWidget {
           Flexible(
             child: Container(
               width: double.infinity,
-              height: 140,
+              height: MediaQuery.of(context).size.height * 0.22, // height: 140,
               child: Stack(
                 children: <Widget>[
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: double.infinity,
-                      height: 100,
+                      height: MediaQuery.of(context).size.height * 0.16, //height: 100,
                       decoration: BoxDecoration(
                         color: primeiroItemBg,
                         borderRadius: BorderRadius.circular(15),
@@ -161,14 +161,14 @@ class PesquisaCard extends StatelessWidget {
           Flexible(
             child: Container(
               width: double.infinity,
-              height: 140,
+              height: MediaQuery.of(context).size.height * 0.22, // height: 140,
               child: Stack(
                 children: <Widget>[
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: double.infinity,
-                      height: 100,
+                      height: MediaQuery.of(context).size.height * 0.16, //height: 100,
                       decoration: BoxDecoration(
                         color: segundoItemBg,
                         borderRadius: BorderRadius.circular(15),

@@ -17,7 +17,7 @@ class CardBuild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 30, bottom: 10),
+      padding: EdgeInsets.only(right: 30, bottom: 100),
       child: Container(
         decoration: BoxDecoration(
           color: textWhite,
@@ -29,7 +29,7 @@ class CardBuild extends StatelessWidget {
           )],
         ),
         child: Container(
-          width: 250,
+          width: MediaQuery.of(context).size.width * 0.65, // width: 250,
           child: Column(
             children: <Widget>[
               Image.asset(imgCard),
